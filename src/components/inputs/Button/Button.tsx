@@ -6,15 +6,15 @@ const Button = ({
   label,
   size = "default",
   variant = "default",
-  state = "default",
   disabled = false,
+  state = "default",
   handleClick,
 }: ButtonProps) => {
   return (
     <StyledButton
+      state={state}
       size={size}
       variant={variant}
-      state={state}
       disabled={disabled}
       onClick={handleClick}
     >
