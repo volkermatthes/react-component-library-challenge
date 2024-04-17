@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ButtonProps } from "../../../types";
 
 const variantStyles = {
   default: `
@@ -87,12 +86,17 @@ const sizeStyles = {
   `,
 };
 
-export const StyledButton = styled.button<ButtonProps>`
+export const StyledButton = styled.button<{
+  $size: "default" | "small";
+  $variant: "default" | "primary" | "danger";
+}>`
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+  font-family: "Inter", sans-serif;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 1px 2px 0px #1018280d;
   cursor: "pointer";
 
-  ${(props) => sizeStyles[props.size]}
-  ${(props) => variantStyles[props.variant]}
+  ${({ $size }) => sizeStyles[$size]}
+  ${({ $variant }) => variantStyles[$variant]}
 `;

@@ -16,13 +16,11 @@ const meta = {
     label: "Button",
     size: "default",
     handleClick: fn(() => console.log("Button clicked")),
-    state: "default",
   },
   argTypes: {
-    state: {
-      control: {
-        type: "select",
-        options: ["default", "hover", "pressed", "disabled", "focused"],
+    handleClick: {
+      table: {
+        disable: true,
       },
     },
     variant: {
@@ -51,12 +49,5 @@ export const Primary: Story = {
 export const Danger: Story = {
   args: {
     variant: "danger",
-  },
-};
-
-export const Hover: Story = {
-  args: {
-    state: "hover",
-    variant: "default",
   },
 };

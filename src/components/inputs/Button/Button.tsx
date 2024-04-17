@@ -7,14 +7,12 @@ const Button = ({
   size = "default",
   variant = "default",
   disabled = false,
-  state = "default",
   handleClick,
 }: ButtonProps) => {
   return (
     <StyledButton
-      state={state}
-      size={size}
-      variant={variant}
+      $size={size}
+      $variant={variant}
       disabled={disabled}
       onClick={handleClick}
     >

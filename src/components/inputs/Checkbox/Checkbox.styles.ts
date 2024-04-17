@@ -22,13 +22,17 @@ const styles = {
 };
 
 const Label = styled.label`
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+font-family: "Inter", sans-serif;
+font-size: 14px;
+sans-serif;
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
 `;
 
-const CheckboxHidden = styled.input<{ checked: boolean }>`
+const CheckboxHidden = styled.input`
   opacity: 0;
   position: absolute;
   cursor: pointer;

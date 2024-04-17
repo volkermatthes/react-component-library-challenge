@@ -19,6 +19,21 @@ const meta = {
     name: "group",
   },
   argTypes: {
+    handleClick: {
+      table: {
+        disable: true,
+      },
+    },
+    name: {
+      table: {
+        disable: true,
+      },
+    },
+    value: {
+      table: {
+        disable: true,
+      },
+    },
     isChecked: {
       control: "boolean",
     },
